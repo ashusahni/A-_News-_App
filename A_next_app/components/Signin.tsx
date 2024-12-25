@@ -1,15 +1,9 @@
-"use client";
 
-import { useState } from "react";
+import Button from "./Button";
 
 export const SinginComponent = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
-  // const handleSubmit = (e:any) => {
-  //   e.preventDefault();
-  //   console.log("Form Submitted", { email, password });
-  // };
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -23,8 +17,6 @@ export const SinginComponent = () => {
             <input
               type="email"
               id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
               className="w-full border text-black border-gray-300 p-2 rounded-md focus:outline-none focus:border-blue-500"
             />
           </div>
@@ -35,19 +27,10 @@ export const SinginComponent = () => {
             <input
               type="password"
               id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
               className="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:border-blue-500"
             />
           </div>
-          <button onClick={()=>{
-            console.log("Form Submitted", { email, password });
-          }}
-            type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md"
-          >
-            Login
-          </button>
+          <Button/>
         </form>
       </div>
     </div>
